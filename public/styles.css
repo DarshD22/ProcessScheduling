@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --card-background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.output {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.output-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.output-table th,
+.output-table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.output-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 16px; /* Prevents zoom on mobile */
+    }
+
+    .output-table {
+        font-size: 0.8rem;
+    }
+
+    .output-table th,
+    .output-table td {
+        padding: 0.3rem;
+    }
+}

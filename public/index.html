@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Scheduler Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Process Scheduler</h1>
+        </header>
+        <main>
+            <form id="simulator-form" class="card">
+                <div class="form-group">
+                    <label for="algorithms">Select Algorithm:</label>
+                    <select id="algorithms" name="algorithms" required>
+                        <option value="">Choose an algorithm</option>
+                        <option value="1">1. FCFS (First Come First Serve)</option>
+                        <option value="2">2. RR (Round Robin)</option>
+                        <option value="3">3. SJF (Shortest Job First)</option>
+                        <option value="4">4. SRT (Shortest Remaining Time First)</option>
+                        <option value="5">5. HRRN (Highest Response Ratio Next)</option>
+                    </select>
+                </div>
+                <div id="quantum-group" class="form-group" style="display: none;">
+                    <label for="quantum">Quantum for Round Robin:</label>
+                    <input type="number" id="quantum" name="quantum" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="process_count">Process Count:</label>
+                    <input type="number" id="process_count" name="process_count" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="processes">Processes Input:</label>
+                    <textarea id="processes" name="processes" rows="5" required placeholder="Enter each process as: name,arrival_time,burst_time&#10;Example:&#10;P1,0,10&#10;P2,1,5&#10;P3,3,8"></textarea>
+                </div>
+                <button type="submit" class="btn">Run Algorithm</button>
+            </form>
+            <div id="output" class="output card"></div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Process Scheduler Simulator</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
